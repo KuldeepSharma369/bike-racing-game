@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="
+            width=device-width,
+            initial-scale=1.0,
+            maximum-scale=1.0,
+            user-scalable=no,
+            viewport-fit=cover
+        "
+    >
+
+    <meta
+        name="mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+    >
+
+    <meta
+        name="theme-color"
+        content="#000000"
+    >
+
+    <title>Bike Racing Game</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- THREE.JS IMPORT MAP -->
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         THREE.JS GAME
+    =========================================== -->
+
+    <div id="game-container"></div>
+
+
+    <!-- ==========================================
+         SPEEDOMETER
+    =========================================== -->
+
+    <div id="speedometer">
+
+        <div class="speed-number">
+
+            <span id="speed">0</span>
+
+        </div>
+
+        <div class="speed-unit">
+            km/h
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         MOBILE TOP BUTTONS
+    =========================================== -->
+
+    <div id="mobile-top-controls">
+
+        <button
+            id="mobile-pause"
+            class="top-control-button"
+            type="button"
+            aria-label="Pause game"
+        >
+            ⏸
+        </button>
+
+        <button
+            id="mobile-restart"
+            class="top-control-button"
+            type="button"
+            aria-label="Restart game"
+        >
+            ↻
+        </button>
+
+    </div>
+
+
+    <!-- ==========================================
+         MOBILE / TABLET GAME CONTROLS
+    =========================================== -->
+
+    <div
+        id="mobile-controls"
+        aria-label="Game controls"
+    >
+
+        <!-- LEFT SIDE -->
+
+        <div class="steering-controls">
+
+            <button
+                id="touch-left"
+                class="game-control steering-button"
+                type="button"
+                aria-label="Steer left"
+            >
+                <span class="control-icon">
+                    ◀
+                </span>
+
+                <span class="control-label">
+                    LEFT
+                </span>
+            </button>
+
+
+            <button
+                id="touch-right"
+                class="game-control steering-button"
+                type="button"
+                aria-label="Steer right"
+            >
+                <span class="control-icon">
+                    ▶
+                </span>
+
+                <span class="control-label">
+                    RIGHT
+                </span>
+            </button>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="driving-controls">
+
+            <button
+                id="touch-nitro"
+                class="game-control nitro-button"
+                type="button"
+                aria-label="Activate nitro"
+            >
+                <span class="control-icon">
+                    🔥
+                </span>
+
+                <span class="control-label">
+                    NITRO
+                </span>
+            </button>
+
+
+            <div class="pedal-controls">
+
+                <button
+                    id="touch-brake"
+                    class="game-control brake-button"
+                    type="button"
+                    aria-label="Brake"
+                >
+                    <span class="control-icon">
+                        ▼
+                    </span>
+
+                    <span class="control-label">
+                        BRAKE
+                    </span>
+                </button>
+
+
+                <button
+                    id="touch-go"
+                    class="game-control go-button"
+                    type="button"
+                    aria-label="Accelerate"
+                >
+                    <span class="control-icon">
+                        ▲
+                    </span>
+
+                    <span class="control-label">
+                        GO
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         ROTATE PHONE MESSAGE
+    =========================================== -->
+
+    <div id="rotate-message">
+
+        <div class="rotate-card">
+
+            <div class="rotate-icon">
+                📱↻
+            </div>
+
+            <strong>
+                Rotate Your Phone
+            </strong>
+
+            <span>
+                Landscape mode gives the best racing experience.
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         GAME
+    =========================================== -->
+
+    <script
+        type="module"
+        src="game.js"
+    ></script>
+
+</body>
+
+</html>s
